@@ -10,12 +10,8 @@ class HornedBeast extends Component {
       
       render() {
         return (
-        <div className='card card-shadow'>
-            <h2 className='card-title'>{this.props.title}</h2>
-            <img className="card-img" src={this.props.imgUrl} alt={this.props.title}/>
-            <p className='card-body'>
-                {this.props.description}
-            </p>
+        <div id="beast-list">
+            {this.props.beasts.map(beast => <img className="card-img" width="200px" src={beast.imgUrl} alt={beast.title} />)}
         </div>
     )}
 }
