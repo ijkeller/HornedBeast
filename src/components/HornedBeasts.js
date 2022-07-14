@@ -4,9 +4,9 @@ import { Component } from 'react';
 class HornedBeast extends Component {
     constructor(props) {
         super(props);
-        // console.log('Props: ')
-        // console.log(props);
-        // console.log('--------')
+        console.log('Props: ')
+        console.log(props);
+        console.log('--------')
 
         this.state = {
             favorite: 0,
@@ -15,8 +15,15 @@ class HornedBeast extends Component {
 
     render() {
         return (
-            <div key={this.props.id} id={this.props.title}>
-                <img key={this.props.id} className="card-img" width="200px" src={this.props.beastsImg} alt={this.props.title} />
+            <div className='card-grid'>
+                {this.props.beasts.map(beast =>
+                    <img key={beast._id}
+                        className="card-img"
+                        width="200px"
+                        src={beast.image_url}
+                        alt={beast.title}
+                        onClick={() => beast.selectBeast(beast)} />
+                )}
             </div>
         )
     }

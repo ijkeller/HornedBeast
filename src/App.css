@@ -2,6 +2,7 @@
   text-align: center;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
+  display: grid;
 }
 
 .App-header {
@@ -14,11 +15,26 @@
   color: white;
 }
 
+.main-display {
+
+  margin: 3rem;
+}
+
+.current-beast {
+  max-width: 60vw;
+  max-height: 60vh;
+  justify-self: center;
+  margin: 1.5rem;
+}
+
 .card-grid {
   display: grid;
-  /* grid-template-rows: repeat(auto-fill, minmax(300px, 700px)); */
+  width: 92vw;
+  margin: 0 4vw;
+  grid-template-columns: repeat(auto-fill, 225px);
   gap: 1rem;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
 }
 
 .card {
@@ -26,7 +42,7 @@
   --padding: 1rem;
   background: white;
   border: none;
-  box-shadow: 0 2px 5px 0 rgba(0, 0,  0, .2);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .2);
   border-radius: .25rem;
   max-width: 500px;
   max-height: 500px;
@@ -36,7 +52,7 @@
   display: block;
   /* object-fit: cover; */
   border-radius: .25rem;
-  box-shadow: inset 2px 2px 0 5px  rgba(0, 0,  0, .2);
+  box-shadow: inset 2px 2px 0 5px rgba(0, 0, 0, .2);
   max-width: 400px;
   max-height: 400px;
   justify-self: center;
@@ -44,9 +60,9 @@
   transition: 200ms transform ease-in-out;
 }
 
-.card:hover > .card-img {
+.card:hover>.card-img {
   transform: scale(1.025);
-  box-shadow: inset 0 0 0 0 rgba(0, 0,  0, .2);
+  box-shadow: inset 0 0 0 0 rgba(0, 0, 0, .2);
 }
 
 .card-body {

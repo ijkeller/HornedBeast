@@ -13,27 +13,23 @@ class Main extends Component {
         };
     }
 
+    selectCurrentBeast = (beast) => {
+        this.setState({ currentBeast: beast });
+    }
+
     render() {
+        console.log('currentBeast')
+        console.log(this.state.currentBeast);
+        console.log('------------')
 
-        if (this.state.beastsList) {
-
-            console.log('this.state.beastsList')
-            console.log(this.state.beastsList)
-            console.log('------------')
-        }
         return (
 
             <main>
                 <CurrentBeast currentBeast={this.state.currentBeast} />
-                <div className='card-grid' >
-                    {this.state.beastsList.map(x =>
-                        <HornedBeast
-                            beastsImg={x.image_url}
-                            title={x.title}
-                            id={x._id}
-                        />
-                    )}
-                </div>
+                <HornedBeast
+                    beasts={this.state.beastsList}
+                    selectBeast={this.selectCurrentBeast}
+                />
             </main>
         )
     }
