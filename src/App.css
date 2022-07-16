@@ -31,20 +31,24 @@
   display: grid;
   width: 92vw;
   margin: 0 4vw;
-  grid-template-columns: repeat(auto-fill, 225px);
+  grid-template-columns: repeat(auto-fill, 250px);
   gap: 1rem;
   align-items: center;
   justify-content: center;
 }
 
 .card {
-  display: grid;
-  --padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
   background: white;
   border: none;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .2);
   border-radius: .25rem;
-  max-width: 500px;
+  width: 230px;
   max-height: 500px;
 }
 
@@ -66,6 +70,7 @@
 }
 
 .card-body {
+  display: block;
   font-size: .9rem;
   padding: 0 var(--padding);
 }

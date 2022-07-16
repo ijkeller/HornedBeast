@@ -5,32 +5,35 @@ import Card from 'react-bootstrap/Card';
 class HornedBeast extends Component {
     constructor(props) {
         super(props);
-        console.log('Props: ')
-        console.log(props);
-        console.log('--------')
-
         this.state = {
             favorite: 0,
         }
     }
 
     handleClick = (e) => {
-        this.setState({favorite: this.state.favorite+1})
-        console.log(this.state.favorite)
+        this.setState({ favorite: this.state.favorite + 1 })
     }
 
     render() {
         return (
-            <div className='card-grid'>
-                {this.props.beasts.map(beast =>
-                    <img key={beast._id}
-                        className="card-img"
-                        width="200px"
-                        src={beast.image_url}
-                        alt={beast.title}/>
-                )}
-                <Button version='Primary' onClick={this.handleClick}>Vote for this Beast (&hearts; = {this.state.favorite})</Button>
-            </div>
+            <>
+                <Card className='card' >
+                    <Card.Img className="card-img" width="200px" variant="top" src={this.props.image_url} alt={this.props.title} />
+                    <Card.Body>
+                        <Card.Title>{this.props.title}</Card.Title>
+                        <span>&hearts; = {this.state.favorite}</span>
+                        <Card.Text>{this.props.description}
+                        </Card.Text>
+                        <Button variant="primary" onClick={this.handleClick}>Vote for this beast</Button>
+                    </Card.Body>
+                </Card>
+                {/* <img key={this.props._id}
+                    className="card-img"
+                    width="200px"
+                    src={this.props.image_url}
+                    alt={this.props.title} />
+                <Button version='primary' onClick={this.handleClick}>Vote for this beast (&hearts; = {this.state.favorite})</Button> */}
+            </>
         )
     }
 }

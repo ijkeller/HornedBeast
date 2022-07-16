@@ -26,10 +26,17 @@ class Main extends Component {
 
             <main>
                 <CurrentBeast currentBeast={this.state.currentBeast} />
-                <HornedBeast
-                    beasts={this.state.beastsList}
-                    selectBeast={this.selectCurrentBeast}
+                <div className='card-grid'>
+                {this.state.beastsList.map(beast =>
+                    <HornedBeast
+                    image_url={beast.image_url}
+                    title={beast.title}
+                    description={beast.description}
+                    keyword={beast.keyword}
+                    horns={beast.horns}
                 />
+                )}
+                </div>
             </main>
         )
     }
