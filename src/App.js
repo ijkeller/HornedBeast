@@ -20,7 +20,7 @@ class App extends Component {
   handleClose = () => this.state.modalShowing(false);
 
   handleSelectedBeast = (clickedBeast) => {
-    this.setState({currentBeast: .currentBeast})
+    this.setState({currentBeast: this.props.currentBeast})
   }
 
 
