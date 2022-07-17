@@ -24,7 +24,7 @@ class HornedBeast extends Component {
                         <span>&hearts; = {this.state.favorite}</span>
                         <Card.Text>{this.props.description}
                         </Card.Text>
-                        <Button variant="primary" onClick={this.handleClick}>Vote for this beast</Button>
+                        <Button className='btn btn-primary' onClick={this.handleClick}>Vote for this beast</Button>
                     </Card.Body>
                 </Card>
                 {/* <img key={this.props._id}
