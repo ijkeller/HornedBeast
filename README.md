@@ -9,7 +9,7 @@
 
 ### Estimates
 
-Number and name of feature: Feature #1: Display images
+Feature #1: Display images
 
 Estimate of time needed to complete: 2 hrs
 
@@ -19,7 +19,9 @@ Finish time: 4:41pm the following day
 
 Actual time needed to complete: nearly 24 hours, roughly 4 active working
 
-Number and name of feature: Feature #2: Allow users to vote for their favorite beast
+
+
+Feature #2: Allow users to vote for their favorite beast
 
 Estimate of time needed to complete: 2 hours
 
@@ -29,7 +31,8 @@ Finish time: 7pm
 
 Actual time needed to complete:  2hrs
 
-Number and name of feature: Feature 3: Bootstrap
+
+Feature 3: Bootstrap
 
 Estimate of time needed to complete: 2hrs
 
@@ -39,7 +42,15 @@ Finish time: 7:30pm
 
 Actual time needed to complete: 1:10 
 
+Feature #4: Display a Modal
 
+Estimate of time needed to complete: 4hrs
+
+Start time: 6:44pm
+
+Finish time: _____
+
+Actual time needed to complete: _____
 
 
 
